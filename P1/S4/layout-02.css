@@ -35,6 +35,11 @@ h2 { font-size: 2rem; }
   background: #f2f2f2;
 }
 
+.menu a:active {
+    background: #ddd;
+    font-weight: bold;
+}
+
 /* LAYOUT BASE (sin flex, sin sticky) */
 main {
   /* el padding aquí te sirve para hablar de “aire” y caja */
@@ -49,13 +54,14 @@ aside {
   min-width: 260px;          /* para que no se aplaste demasiado */
   float: left;               /* clave: sale del flujo normal */
   min-height: 500px;            /* para probar scroll */
+  border-right: 12px solid white;
 }
 
 /* Contenido a la derecha */
 article {
   background-color: rgba(50, 255, 50, 0.3);
   padding: 40px;
-  width: 70%;
+  width: 30%;
   float: left;
   min-height: 500px;            /* como ya tenías, para probar scroll */
 }
@@ -79,6 +85,14 @@ footer {
     float: none;      /* vuelven al flujo normal */
     width: 100%;
     min-width: 0;
+  }
+
+  aside {
+    border-right: none;
+  }
+
+  .menu a {
+    padding:10px;
   }
 
   /* PASO 3: MENÚ RESPONSIVE */
